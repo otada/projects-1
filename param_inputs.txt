@@ -1,29 +1,29 @@
-ScenarioNumber;Scenario Number;int;0;scenario_number;1;
-LinkTollAttributeId;Link Toll Attribute Id;string;1;link_toll_attribute_id;"@toll";
-TimesMatrixId;Times Matrix Id;string;2;times_matrix_id;"mf0";
-CostMatrixId;Cost Matrix Id;string;3;cost_matrix_id;"";
-TollsMatrixId;Tolls Matrix Id;string;4;tolls_matrix_id;"";
-RunTitle;Run Title;string;5;run_title;"multi -class run";
-ModeList;Mode List ;string;6;mode_list;"c";
-DemandString;Demand String;string;7;demand_string;"mf10,mf11,f12";
-DemandList;Demand List;string;8;demand_list;"mf10,mf11,f12";
-PeakHourFactor;Peak Hour Factor;float;9;peak_hour_factor; 0.43f;
-LinkCost;Link Cost;string;10;link_cost;"0.0";
-TollWeight;Toll Weight;string;11;toll_weight;"0.0";
-Iterations;Iterations;int;12;iterations;100;
-rGap;r Gap;float;13;r_gap;0.0f;
-brGap;br Gap;float;14;br_gap; 0.1f;
-normGap;norm Gap;float;15;norm_gap; 0.05f;
-PerformanceFlag;Performance Flag;bool;16;performance_flag; false;
-SOLAFlag;SOLA Flag;bool;17;sola_flag; true;
-NameString;Name String;string;18;name_string;"";
-ResultAttributes;Result Attributes;string;19;result_attributes;"";
-AnalysisAttributes;Analysis Attributes;string;20;analysis_attributes;"";
-AnalysisAttributesMatrixId;Analysis Attributes Matrix Id;string;21;analysis_attributes_matrix_id;"";
-AggregationOperator;Aggregation Operator;string;22;aggregation_operator;"+";
-LowerBound;Lower Bound;string;23;lower_bound;"none";
-UpperBound;Upper Bound;string;24;upper_bound;"";
-PathSelection;Path Selection;string;25;path_selection;"";
-MultiplyPathPropByDemand;Multiply Path Prop By Demand;string;26;multiply_path_prop_by_demand;"true";
-MultiplyPathPropByValue;Multiply Path Prop By Value;string;27;multiply_path_prop_by_value;"";
-BackgroundTransit;Background Transit;string;28;background_transit;"true";
+ScenarioNumber	Scenario Number	int	0	scenario_number	1
+LinkTollAttributeId	Link Toll Attribute Id	string	1	link_toll_attribute_id	"""@auto_volume"""
+TimesMatrixId	Times Matrix Id	string	2	times_matrix_id	"""mf10"""
+CostMatrixId	Cost Matrix Id	string	3	cost_matrix_id	""""""
+TollsMatrixId	Tolls Matrix Id	string	4	tolls_matrix_id	""""""
+RunTitle	Run Title	string	5	run_title	"""multi-class run"""
+ModeList	Mode List 	string	6	mode_list	"""c"""
+DemandString	Demand String	string	7	demand_string	"""mf10"""
+DemandList	Demand List	string	8	demand_list	"""mf10"""
+PeakHourFactor	Peak Hour Factor	float	9	peak_hour_factor	 0.43f
+LinkCost	Link Cost	string	10	link_cost	"""@auto_volume"""
+TollWeight	Toll Weight	string	11	toll_weight	0
+Iterations	Iterations	int	12	iterations	100
+rGap	r Gap	float	13	r_gap	0.0001f
+brGap	br Gap	float	14	br_gap	 0.01f
+normGap	norm Gap	float	15	norm_gap	 0.005f
+PerformanceFlag	Performance Flag	bool	16	performance_flag	 false
+SOLAFlag	SOLA Flag	bool	17	sola_flag	 true
+NameString	Name String	string	18	name_string	""""""
+ResultAttributes	Result Attributes	string	19	result_attributes	""""""
+AnalysisAttributes	Analysis Attributes	string	20	analysis_attributes	""""""
+AnalysisAttributesMatrixId	Analysis Attributes Matrix Id	string	21	analysis_attributes_matrix_id	""""""
+AggregationOperator	Aggregation Operator	string	22	aggregation_operator	+
+LowerBound	Lower Bound	string	23	lower_bound	none
+UpperBound	Upper Bound	string	24	upper_bound	""""""
+PathSelection	Path Selection	string	25	path_selection	""""""
+MultiplyPathPropByDemand	Multiply Path Prop By Demand	string	26	multiply_path_prop_by_demand	"""true"""
+MultiplyPathPropByValue	Multiply Path Prop By Value	string	27	multiply_path_prop_by_value	""""""
+BackgroundTransit	Background Transit	string	28	background_transit	"""true"""

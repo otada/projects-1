@@ -19,7 +19,7 @@ class CsharpCodeWriter():
     default_value = ""
 
         
-    def xtmf2_csharp_parameters(self, parameter_name, index_number, function_type, function_name):
+    def create_xtmf2_csharp_parameters(self, parameter_name, index_number, function_type, function_name):
         xtmf2_csharp_param = (
             '[Parameter(Name = "'
             + parameter_name
@@ -40,7 +40,7 @@ class CsharpCodeWriter():
         return xtmf2_csharp_param
 
 
-    def create_xtmf2_modules(self, function_type, module_name, function_name):
+    def create_xtmf2_csharp_modules(self, function_type, module_name, function_name):
         writer_type = ""
 
         if function_type == "bool":
@@ -72,7 +72,7 @@ class CsharpCodeWriter():
                 'writer.WriteString("'
                 + str(module_name)
                 + '", '
-                + str(function_name)
+                + str(function_name).lower()
                 + ".Invoke());"
             )
 
@@ -87,7 +87,7 @@ class CsharpCodeWriter():
                 'writer.WriteBoolean("'
                 + str(module_name)
                 + '", '
-                + str(default_value)
+                + str(default_value).lower()
                 + ");"
             )
         elif function_type == "int":
@@ -95,7 +95,7 @@ class CsharpCodeWriter():
                 'writer.WriteNumber("'
                 + str(module_name)
                 + '", '
-                + str(default_value)
+                + str(default_value).lower()
                 + ");"
             )
         elif function_type == "float":
@@ -103,62 +103,25 @@ class CsharpCodeWriter():
                 'writer.WriteNumber("'
                 + str(module_name)
                 + '", '
-                + str(default_value)
+                + str(default_value).lower()
                 + ");"
             )
         else:
             writer_type = (
                 'writer.WriteString("'
                 + str(module_name)
-                + '", '
-                + str(default_value)
-                + ");"
+                + '", \"'
+                + str(default_value).lower()
+                + "\");"
             )
 
         return writer_type
 
-
-    def create_xtmf2_unit_test_parameters(self, function_type, module_name, default_value):
-        writer_type = ""
-
-        if function_type == "bool":
-            writer_type = (
-                'writer.WriteBoolean("'
-                + str(module_name)
-                + '", '
-                + str(default_value)
-                + ");"
-            )
-        elif function_type == "int":
-            writer_type = (
-                'writer.WriteNumber("'
-                + str(module_name)
-                + '", '
-                + str(default_value)
-                + ");"
-            )
-        elif function_type == "float":
-            writer_type = (
-                'writer.WriteNumber("'
-                + str(module_name)
-                + '", '
-                + str(default_value)
-                + ");"
-            )
+    def create_xtmf2_unit_test_parameters(self, parameter_name, default_value, function_type):
+        if function_type == "string":
+            writer_type = parameter_name + " = Helper.CreateParameter(\"" + default_value.lower() + "\"),"
         else:
-            writer_type = (
-                'writer.WriteString("'
-                + str(module_name)
-                + '", '
-                + str(default_value)
-                + ");"
-            )
-
-        return writer_type
-
-
-    def create_xtmf2_unit_test_module(self, parameter_name, default_value):
-        writer_type = parameter_name + " = Helper.CreateParameter(" + default_value + "),"
+            writer_type = parameter_name + " = Helper.CreateParameter(" + default_value.lower() + "),"
         return writer_type
     
     def _load_file(self, param_txt_file_name):
@@ -167,7 +130,7 @@ class CsharpCodeWriter():
             # cells = header.strip().split(self.NEW_LINE)
             
             for item in reader:
-                items = item.split(self.NEW_LINE)[0].split(self.SEMI_COLON)
+                items = item.split(self.NEW_LINE)[0].split(self.COMMA)
                 keys = items[0]
                 values = items[-len(items)+1:]
                 
@@ -183,18 +146,22 @@ class CsharpCodeWriter():
             module_name = self.module_name = value[3]
             default_value = self.default_value = value[4]
                        
-            XTMF2_parameter_unittest = self.create_xtmf2_unit_test_module(function_name, default_value)
+            XTMF2_parameter_unittest = self.create_xtmf2_unit_test_parameters(function_name, default_value, function_type)
             XTMF2_module_unittest = self.create_xtmf2_unit_test_modules(
                 function_type, module_name, default_value
             )
-            XTMF2_module = self.create_xtmf2_modules(function_type, module_name, function_name)
-            XTMF2_parameters = self.xtmf2_csharp_parameters(
-                parameter_name, index_number, function_type, function_name
+            
+            XTMF2_module = self.create_xtmf2_csharp_modules(function_type, module_name, function_name)
+            XTMF2_parameters = self.create_xtmf2_csharp_parameters(
+                parameter_name, index_number, function_type, function_name,
             )
-            # print(XTMF2_module)
-            # print(XTMF2_parameters)
-            # print(XTMF2_parameter_unittest)
-            # print(XTMF2_module_unittest)
+            if default_value != "":
+                
+                # print(XTMF2_module)
+                print(XTMF2_parameters)
+                # print(XTMF2_parameter_unittest)
+                # print(XTMF2_module_unittest)
+
     
     def run(self, param_txt_file_name):
         

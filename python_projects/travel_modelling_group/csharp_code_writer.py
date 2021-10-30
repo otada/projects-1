@@ -1,5 +1,3 @@
-# TODO: # ---3: handle error
-
 class CsharpCodeWriter():
     COLON = ':'
     COMMA = ','
@@ -19,12 +17,17 @@ class CsharpCodeWriter():
     default_value = ""
 
         
-    def create_xtmf2_csharp_parameters(self, parameter_name, index_number, function_type, function_name):
+    def create_xtmf2_csharp_parameters(self, parameter_name, default_value, description_name,index_number, function_type, function_name):
         xtmf2_csharp_param = (
             '[Parameter(Name = "'
             + parameter_name
             + '", '
-            + 'Description = "", '
+            + 'DefaultValue = "'
+            + default_value
+            +  '", '
+            + 'Description = "'
+            + description_name
+            + '", '
             + "\n\t"
             + "Index = "
             + index_number
@@ -72,7 +75,7 @@ class CsharpCodeWriter():
                 'writer.WriteString("'
                 + str(module_name)
                 + '", '
-                + str(function_name).lower()
+                + str(function_name)
                 + ".Invoke());"
             )
 
@@ -145,7 +148,11 @@ class CsharpCodeWriter():
             function_name = self.function_name = key
             module_name = self.module_name = value[3]
             default_value = self.default_value = value[4]
-                       
+            if len(value) == 6:
+                description_name = self.description = value[5]
+            else:
+                description_name = self.description_name = "".join(value[5:len(value)-1])
+                                                           
             XTMF2_parameter_unittest = self.create_xtmf2_unit_test_parameters(function_name, default_value, function_type)
             XTMF2_module_unittest = self.create_xtmf2_unit_test_modules(
                 function_type, module_name, default_value
@@ -153,20 +160,15 @@ class CsharpCodeWriter():
             
             XTMF2_module = self.create_xtmf2_csharp_modules(function_type, module_name, function_name)
             XTMF2_parameters = self.create_xtmf2_csharp_parameters(
-                parameter_name, index_number, function_type, function_name,
+                parameter_name, default_value, description_name, index_number, function_type, function_name,
             )
-            if default_value != "":
                 
-                # print(XTMF2_module)
-                print(XTMF2_parameters)
-                # print(XTMF2_parameter_unittest)
-                # print(XTMF2_module_unittest)
-
+            # print(XTMF2_module)
+            # print(XTMF2_parameters)
+            print(XTMF2_parameter_unittest)
+            # print(XTMF2_module_unittest)
     
     def run(self, param_txt_file_name):
         
         self._load_file(param_txt_file_name)
         self._write_file()
-        
-        
-

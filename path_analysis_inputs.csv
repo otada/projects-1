@@ -1,0 +1,29 @@
+Key,Name,Type,Index,Module,Default Value,Description
+BackgroundTransit,Background Transit,string,0,background_transit,true,Set this to false to not assign transit vehicles on the roads
+brGap,br Gap,float,1,br_gap,0,The minimum gap required to terminate the algorithm.
+Iterations,Iterations,int,2,iterations,100,The maximum number of iterations to run.
+normGap,norm Gap,float,3,norm_gap,0,The minimum gap required to terminate the algorithm.
+PeakHourFactor,Peak Hour Factor,float,4,peak_hour_factor,1,A factor to apply to the demand in order to build a representative hour.
+PerformanceFlag,Performance Flag,bool,5,performance_flag,true,"Set this to false to leave a free core for other work,recommended to leave set to true."
+rGap,r Gap,float,6,r_gap,0,The minimum gap required to terminate the algorithm.
+RunTitle,Run Title,string,7,run_title,road assignment,The name of the run to appear in the logbook.
+ScenarioNumber,Scenario Number,int,8,scenario_number,0,The scenario number to execute against.
+SOLAFlag ,SOLA Flag,bool,9,sola_flag,true,Sola flag
+ Mode,Mode,char,0,mode,c,The mode for this class.
+ DemandMatrixNumber,Demand Matrix,int,1,demand_matrix,0,The id of the demand matrix to use.
+ TimeMatrix,Time Matrix,int,2,time_matrix,0,The matrix number to save in vehicle travel times
+ CostMatrix,Cost Matrix,int,3,cost_matrix,0,The matrix number to save the total cost into.
+ TollMatrix,Toll Matrix,int,4,toll_matrix,0,The matrix to save the toll costs into.
+ VolumeAttribute,Volume Attribute,string,5,volume_attribute, @auto_volume1,The name of the attribute to save the volumes into (or None for no saving).
+ LinkTollAttributeID,Toll Attribute ID,string,6,link_toll_attribute_id, @toll,The attribute containing the road tolls for this class of vehicle.
+ TollWeight,Toll Weight,float,7,toll_weight,0,The toll weight
+ LinkCost,Link Cost,float,8,link_cost,0,The penalty in minutes per dollar to apply when traversing a link.
+ AttributeId,Attribute ID,string,0,attribute_id,0,The attribute to use for analysis
+ AggregationMatrix,Aggregation Matrix,int,1,aggregation_matrix,0,The matrix number to store the results into
+ AggregationOperator,Operator,string,2,operator,+,The operator to use to aggregate the matrix. Example:'+' for emissions
+ LowerBound,Lower Bound for Path Selector,string,3,lower_bound,None,Lower Bound for Path Selector None The number to use for the lower bound in path selection
+ UpperBound,Upper Bound for Path Selector,string,4,upper_bound,None,Upper Bound for Path Selector None The number to use for the upper bound in path selection
+ PathSelection,Path Selection,string,5,path_selection,ALL,The paths that will be used for analysis
+ MultiplyPathPropByDemand,Multiply Path Prop By Demand,string,6,multiply_demand,true,Choose whether to multiply the path proportion by the analyzed demand
+ MultiplyPathPropByValue,Multiply Path Prop By Value,string,7,multiply_value,true,Choose whether to multiply the path proportion by the path value
+ AnalysisAttributes,Analysis Attributes,string,8,analysis_attributes,@auto_volume,The analysis attributes

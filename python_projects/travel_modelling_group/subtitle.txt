@@ -1,0 +1,295 @@
+Let's talk about Agile Software development from the perspective of the Product Owner
+Here's Pat, she is a Product Owner. She has a product vision that she is really passionate about
+She doesn't know the details of what our product is going to do, but she knows why we are building the product
+What problem it's gonna solve, and for who
+She talks about all the time. Here are the stakeholders
+They are the people who are going to use and support or in any way be affected by the system being developed.
+Pat's vision is that these people here will love our system and use it all the time and tell their friends about it.
+The stakeholders needs and Pat's ideas are expressed as user stories, here.
+For example if this is was flight booking system people need to be able to search for a flight, and maybe that would be one user story
+Both Pat and the stakeholders have lots of ideas so Pat helps turn these into concrete user stories
+Now, somebody has actually to build the system. So here they are.
+a small, co-located, cross-functional self-organizing development team
+Since this is an agile team they don’t save up for a big bang release at the end. Instead, they release early and often.
+In this case, they usually release four to six stories per week,
+So that is their capacity
+Capacity is easy to measure. Just count the number of stories released per week
+Some stories are big, so they can count as two. Some are small and count as a half
+but on all, that adds up to about four six stories per week
+Some people call this story points but I'm just gonna call them stories per week.
+In order to maintain this pace and not get bogged down by manual regression testing,
+the team invests heavily in automated testing and continuous integration,
+so every story has at least one automated acceptance test at feature level
+and most of the code has automated unit tests.
+The problem is, here are bunch of stakeholders asking for all kinds of stuff
+and they sure aren’t going to be limited to four to six ideas per week.
+They have LOTS of ideas and LOTS of wishes.
+And every time we deliver something to them, they will get even more ideas and ask for even more stuff.
+So what happens if we try to please them, try to do everything they ask for ?
+will get overflow! Suppose the team starts working at ten user stories per week.
+If the input is ten and the output is four to six, the team will get overloaded
+That will cause multitasking, demotivation and all kinds of bad stuff, and ultimately a lower output and lower quality
+It's a lose-lose proposition. It´s kind like trying to shove more paper into a printer to make it print faster,
+or shoving more cars onto an already crammed highway system.
+it just doesn't work. It just makes things worse.
+So, what do we do about this?
+The Scrum and XP way of avoiding this problem is called "Yesterday's Weather"
+The team says "well, the past few weeks we've finished four to six features per week
+so, which  to  features shall we build this week?
+And the product owner job is to figure out of all possible stories in the whole universe
+which  to  stories shall we deliver next.
+The Kanban way is to limit Work In Progress or limit WIP
+Suppose the team decides that five is a optimum number of stories to be worked out simultaneously
+They've learned that is just enough to keep everybody busy without causing an overload
+so they decided that five is their wip limit
+whenever they finish one story
+they will accept one user story
+thereby making sure that they never break the limit of five ongoing stories
+both of these approach work fine
+in the sense that the team
+will have just enough work to do and they'll be working fast and affectively
+a side effect though is that there will be a queue forming in front of the team
+and that queue in Scrum is called the Product Backlog
+the queue needs to be managed
+suppose stakeholders keep asking for ten user stories every week
+and the team deliver four to six stories every week
+that means the queue will just get longer and longer
+so, before you know it, you have six month long of wish list in the backlog, and growing
+that means that on average, every story that team deliver is something that somebody asked for six months ago
+how agile is that?
+so there's really only one way to stop the queue from getting out of control
+that word is "NO"
+it is the most important word for Product Owner and Pat practices it
+every day in front of the mirror
+saying yes to a new feature request is easy
+especially if it only means adding it to an ever growing backlog
+the most important job of the product owner is decide what NOT to build
+and taking the consequences of that decision
+and that's why it's hard, of course
+the Product Owner decides what goes in and what goes out
+the Product Owner also decides the sequencing
+what to build now, what to build later
+and how long does this list actually need to be
+that's a hard job so Pat doesn't do it alone
+she does it in collaboration with the team and the stakeholders
+to be able to prioritize the Product Owner must have some idea of the value
+of each story as well as the size. Some stores are critically important others are just bonus features
+Some stories take just a few hours to build and others take months
+Now guess what the correlation is between story value and story size. That's right! None!
+bigger doesn't mean better
+Think any system that you used and I bet you can think of at least one really simple feature that is very important, that you use every day
+and I bet you can think of at least one huge complicated feature that is totally unimportant
+value and size is what helps Pat prioritize intelligently
+like here, these stories are roughly the same size but a different value
+so build this one first
+and over here these two stories have roughly the same value
+but different size
+so build this one first, and so on
+ok that's sound easy enough
+but wait a second
+how does she know the value of the story
+and how does she know the size?
+well here's the bad news, she doesn't
+it's a guessing game
+and it's a game that everyone is involved in
+Pat continuously talk to stakeholders to find out what they value
+and she continuously talk to the team to find out what they think is big or small
+in terms of implementation effort
+these are relative guesses, not absolute numbers
+i don't know what this apple weighs or that strawberry
+but i'm pretty sure that the apple weighs at least five times as much and that the strawberry taste better
+to me at least. And that's all Pat needs to know in order to prioritize the backlog
+pretty cool that way
+At the beginning of a new project
+our guesses well inevitably suck
+but that's ok, the biggest value is really in the conversations rather than the actual numbers
+and every time the team delivers something to real users
+we learn something
+and get better at guessing both value and size
+that way we continuously prioritize and estimate
+Trying to get it all right from the beginning is pretty dumb because that's when we know the least
+so the feedback loop is your friend
+Prioritization is not enough though
+in order to deliver early and often
+you need to break stories down into bite sized pieces
+preferably just a few days of work per story
+we want this nice funnel shape
+with small clear stories at the front
+and more vague stories at the back
+by doing this breakdown in a just-in-time fashion
+we can take advantage of our latest insights about the product and user needs
+all the stuff I'm talking about, estimating the value and size of stories, prioritizing, splitting
+all that it is usually called "backlog grooming"
+Pat runs a Backlog Grooming workshop every Wednesday from eleven to twelve
+one hour per week, the whole team is usually there
+and sometimes a few stakeholders as well
+the agenda varies a bit but sometimes that focuses on estimation, sometimes on splitting stories
+sometimes on writing acceptance criteria for a story, etc
+so i hope you're noticing the theme here communication
+product ownership is really all about communication
+when I ask experienced product owners what it takes to succeed
+They usually emphasize passion and communication
+so it's no coincidence that the first principle of the agile manifesto is
+individuals and interactions over processes and tools
+so the Product Owner's job is not to spoon feed team with stories, that's boring and ineffective
+Pat instead make sure everybody understands the Vision
+that the team is in direct contact with stakeholders
+and that there is short feedback loop in terms of frequent deliveries to real users
+that way team learns and can make daily trade off decisions on their own, so Pat can focus on the big picture
+let's take a look at a few of the trade-offs that need to be made by Pat and the Team
+first of all there's a tradeoff between different types of value
+early on on the project uncertainty and risk is our enemy, there's business risk
+are we building the right thing
+there're social risk, can these people build it, and there's technical risk
+will it work on the platform that we want to run it on, will it scale
+and there's cost and schedule risk
+can we finish the product in a reasonable amount of time
+for a reasonable amount of money
+knowledge can be seen as the opposite of risk
+so when uncertainty is high our focus is knowledge acquisition
+we focus on things like user interface prototypes or technical spikes or experiments
+maybe not too exciting for the customers
+but still valuable because we are reducing risk
+from a customer value perspective
+the curve looks like this, in the beginning
+as uncertainty is reduced we gradually focus more and more on customer value
+we know what we're going to build and how, so just do it
+and by doing the highest values stories first we get this nice steep value curve
+and then gradually the value curve starts flattening out
+we've built the most important stuff, and now we're just adding the bonus features
+the toppings on the ice cream
+this is a nice place to be because any point
+Pat and the team may decide to trim the tail
+cut right here
+and move on to another more important project
+or maybe start a whole new feature area within the same product, that is business agility
+so when i talk about value here I actually mean
+knowledge value + customer value
+and we need to continuously
+find the trade-off between these two
+another trade-off is short-term versus long-term thinking
+what should we build next
+should we do that urgent bug fix
+or build that awesome new feature that will blow the users away
+or do that difficult platform upgrade
+that will enable faster development in the future some time
+we need to continuously balance between reactive work and proactive work
+or fire fighting and fire prevention
+and this relates another trade off
+should we focus on building the right thing
+or building the thing right
+or perhaps building it fast
+ideally want all three
+but it's hard to find the balance
+suppose we are here
+try to build the perfect product
+with the perfect architecture
+if we spend too much time trying to get it perfect we may miss the market window or run into cash flow problems
+or suppose we're here, rushing to turn a prototype into a useful product
+great for the short term perhaps, but in the long term we might be drowning in technical death
+and our velocity will approach to zero
+or suppose we are here
+building a beautiful cathedral in record time
+except the users didn't need a cathedral, they need a camper van
+so there's a healthy tension here between the Scrum roles
+Product Owner tend to focus on building the right thing
+Development Teams tend to focus on building the thing right
+and Scrum Master or Agile Coaches tend to focus on shortening the feedback loop
+speed is actually worth emphasizing because a short feedback loop will accelerate learning
+so you'll more quickly learn what the right thing is and how to build it right
+however all three perspectives are important, so
+keep trying to find the balance
+finally there is a trade-off between new product development and old product improvement
+product backlog is actually a slightly confusing term because it implies that there's only one product
+and project is a confusing term too because it implies that product development ends
+the product is never really finished
+there's always maintenance and improvements to be done
+until to a product reaches end of life and shut down
+so when a team starts developing a new product
+what happens to their last one?
+handing off a product from one team to another is expensive and risky
+so a more common scenario is that the team continues maintaining the old product
+while developing the new one
+so it's not really a product backlog anymore, it's more like a team backlog
+a list of stuff that the Product Owner wants this team to build
+and it can be a mix of stuff from different products
+and the Product Owner needs to continuously make tradeoffs between these
+once in a while a stakeholder will call Pat and say "hey when will my stuff be done?"
+or, how much of my stuff will be done by Christmas
+as Product Owner, Pat is responsible for expectations management
+or more importantly, realistic expectations management
+and that means no lying
+I know, it's tough, but who said Agile was easy?
+it's not really that hard to make a forecast as long as it doesn't have to be exact
+if you measure the velocity of your team
+or the combined velocity of all your teams
+you could draw a story burn up chart, like this
+this chart shows the cumulative number of stories delivered over time, or story points if you prefer
+note the difference, this curve shows output, that curve shows outcome
+that's the output and that's the outcome that we hope it will achieve
+our goal is not to produce as much output as possible
+our goal is to reach the desired outcome
+happy stakeholders
+using the lest possible output
+less is more
+now look at the burn up chart
+and you can draw an optimistic and pessimistic trend line
+you can do it using fancy statistic voodoo or you can just draw it visually
+and the gap between these lines is of course related to how wavy and unpredictable your velocity is
+luckily that tends to stabilize over time
+so our cone of uncertainty should get tighter and tighter
+okay, so back to expectations management. Suppose the stakeholders ask Pat "when will all of these stuff be done?"
+"when will we be here?"
+that's a fix scope / variable time question
+so Pat uses the two trend lines to answer
+most likely sometime between April and mid May
+suppose stakeholder ask Pat "how much will be done by Christmas?"
+that's a fixed time / variable scope question
+the trend lines tell us that we'll most likely finished all of these, by christmas
+some of those and none of those
+and finally suppose stakeholders say
+"can we get these features by christmas?"
+now that's a fixed time / fixed scope question
+looking at trend lines Pat says "nope, sorry, ain't gonna happen"
+followed by, "here's how much we can get done by christmas"
+or "here's how much more time we would need to get everything done"
+it's generally better to reduce scope than to extend time
+because if we reduce scope first
+we still have the option to extend the time later, and add the rest of the stories
+vice versa doesn't work because, darnit, we can't turn the clock backwards
+you know, time is rather annoying that way, isn't it? so Pat puts it this way
+we could deliver something here and the rest later
+or we could deliver nothing here and the rest later
+which do you prefer?
+these calculations are pretty simple to do so Pat updates a forecast every week
+the important thing here is that we are using real data to make the forecast
+and that we're been honest about uncertainty
+I said no lying, right?
+so this is a very honest way of communicating with stakeholders
+and they usually appreciate it that a lot
+if your organization doesn't like truth and honesty it probably won't like Agile
+now a word of warning
+if the team is accumulating technical debt
+if they're not writing tests and not continuously improving the architecture
+then they will get slower and slower overtime
+and the story burn up curve will gradually flatten out and that makes forecasting almost impossible for Pat
+so the team is responsible for maintaining a sustainable pace
+and Pat avoids pressuring them into taking shortcuts
+okay what if we have a larger project, with multiple teams
+and we have several Product Owners, each with their own backlog for a different part of the product
+overall the model is really the same
+we still need capacity management
+we still need stakeholder communication
+we still need product owners who can say NO, we still need backlog grooming
+we still need a short feedback loop etc
+velocity is really the sum of all output
+so that can be used for forecasting
+or make a separate forecast for each team, if that makes more sense
+in a multiple team scenario, however, the product owners have an important additional responsibility
+to talk to each other
+we should organize Teams and Backlogs to minimize dependencies
+but there will always be some dependencies that we just can't get rid of
+so there needs to be some kind of sync between Product Owners so they build things in a sensible order and avoid sub-optimizing
+in large projects this usually calls for some kind of Chief Product Owner role
+to keep the Product Owners synchronized
+okay that's it, Agile Product Ownership in a Nutshell, I hope this was useful to you.

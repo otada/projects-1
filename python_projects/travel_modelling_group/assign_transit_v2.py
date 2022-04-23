@@ -1691,8 +1691,7 @@ class AssignTransit(_m.Tool()):
             if mode.type == "TRANSIT":
                 ret.append({"mode": mode.id, "next_journey_level": 1})
             elif mode.type == "AUX_TRANSIT":
-                next_level = 1 if level >= 1 else 0
-                ret.append({"mode": mode.id, "next_journey_level": next_level})
+                ret.append({"mode": mode.id, "next_journey_level": level})
         return ret
 
     def _update_volumes(self, network, lambdaK):

@@ -1,0 +1,38 @@
+Transit Agency,NCS16 Transit Line Code,NCS22 Transit Line Code
+Brampton,B,B
+Brantford,,BB
+Durham Regional,D,D
+Orangeville,,DO
+GO Bus,G,GB
+Go Rail,G,GT
+Burlington,HB,HB
+Milton,HM,HM
+Oakville,HO,HO
+Grand River Transit,,K
+Link Train at Pearson Intl’ Airport,,LINK
+Mississauga,PM,M
+Cobourg Transit,,NC
+Pelham,,NE
+Fort Erie,,NF
+Port Hope Transit,,NH
+Lincoln,,NI
+Niagara-on-the-Lake,,NL
+Niagara Falls,,NN
+Port Colborne,,NP
+Niagara Region,,NR
+St. Catherines,,NS
+Welland,,NW
+Peterborough,,PP
+Barrie,,SB
+Collingwood,,SC
+Simcoe-Linx,,SL
+Midland – Penetanguishene,,SM
+Orillia,,SO
+Wasaga Beach,,SW
+TTC (Bus and Streetcar),T,T
+TTC Train,,TS
+HSR,WW,W
+Guelph,,WG
+York Region Transit,Y,Y
+Bradford West Gwillimbury,,YB
+Viva route,YV,YV
